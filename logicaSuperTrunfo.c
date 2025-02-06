@@ -1,44 +1,25 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
+// Tema 1 - Cadastro das Cartas
+// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-
+    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
+    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    
     // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
-
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
-
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
+    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    
+    // Exibição dos Dados das Cartas:'
+    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
+    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
 
+    // INICIANDO O DESAFIO
+    // Iniciando a codificação será impresso o Título: 
     
     printf ("*** Desafio: Cartas Super Trunfo - Países ***\n\n\n");
 
@@ -1560,8 +1541,8 @@ int main() {
 
     // O primeiro usuário escolhe o atributo desejado e é efetuada a comparação das cartas, determinando o vencedor
 
-    int atributoescolhido;
-    printf("\n\n\nPrimeiro Jogador, escolha 01 atributo da sua carta para iniciar a comparação:\n");
+    int atributoescolhido1, atributoescolhido2;
+    printf("\n\n\nPrimeiro Jogador, escolha 02 atributos da sua carta para iniciar a comparação:\n");
     printf("1. População\n");
     printf("2. Área\n");
     printf("3. PIB\n"); 
@@ -1569,60 +1550,61 @@ int main() {
     printf("5. Densidade Populacional (ganha o menor)\n");
     printf("6. PIB Per Capita\n");
     printf("7. Super Poder (somatório de todos os dados\n");
-    scanf("%d", &atributoescolhido);
+    scanf("%d", &atributoescolhido1);
+    scanf("%d", &atributoescolhido2);
 
-    // Comparação das cartas com base no atributo escolhido
+    // Comparação das cartas com base no atributo 01 escolhido
 
-    switch (atributoescolhido) {
+    switch (atributoescolhido1) {
 case 1: // População
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
         (populacaoA01 > populacaoA02) ? printf("A carta A01 venceu com a População de %d contra %d da carta A02\n", populacaoA01, populacaoA02) 
-                                        : (populacaoA01 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A01\n", populacaoA02, populacaoA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
+            : (populacaoA01 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A01\n", populacaoA02, populacaoA01) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
         (populacaoA01 > populacaoA03) ? printf("A carta A01 venceu com a População de %d contra %d da carta A03\n", populacaoA01, populacaoA03) 
-                                        : (populacaoA01 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A01\n", populacaoA03, populacaoA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
+            : (populacaoA01 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A01\n", populacaoA03, populacaoA01) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
         (populacaoA01 > populacaoA04) ? printf("A carta A01 venceu com a População de %d contra %d da carta A04\n", populacaoA01, populacaoA04) 
-                                        : (populacaoA01 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A01\n", populacaoA04, populacaoA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
+            : (populacaoA01 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A01\n", populacaoA04, populacaoA01) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
         (populacaoA02 > populacaoA01) ? printf("A carta A02 venceu com a População de %d contra %d da carta A01\n", populacaoA02, populacaoA01) 
-                                        : (populacaoA02 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A02\n", populacaoA01, populacaoA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
+            : (populacaoA02 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A02\n", populacaoA01, populacaoA02) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
         (populacaoA02 > populacaoA03) ? printf("A carta A02 venceu com a População de %d contra %d da carta A03\n", populacaoA02, populacaoA03) 
-                                        : (populacaoA02 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A02\n", populacaoA03, populacaoA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
+            : (populacaoA02 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A02\n", populacaoA03, populacaoA02) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
         (populacaoA02 > populacaoA04) ? printf("A carta A02 venceu com a População de %d contra %d da carta A04\n", populacaoA02, populacaoA04) 
-                                        : (populacaoA02 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A02\n", populacaoA04, populacaoA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
+            : (populacaoA02 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A02\n", populacaoA04, populacaoA02) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
         (populacaoA03 > populacaoA01) ? printf("A carta A03 venceu com a População de %d contra %d da carta A01\n", populacaoA03, populacaoA01) 
-                                        : (populacaoA03 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A03\n", populacaoA01, populacaoA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
+            : (populacaoA03 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A03\n", populacaoA01, populacaoA03) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
         (populacaoA03 > populacaoA02) ? printf("A carta A03 venceu com a População de %d contra %d da carta A02\n", populacaoA03, populacaoA02) 
-                                        : (populacaoA03 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A03\n", populacaoA02, populacaoA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
+            : (populacaoA03 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A03\n", populacaoA02, populacaoA03) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
         (populacaoA03 > populacaoA04) ? printf("A carta A03 venceu com a População de %d contra %d da carta A04\n", populacaoA03, populacaoA04) 
-                                        : (populacaoA03 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A03\n", populacaoA04, populacaoA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
+            : (populacaoA03 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A03\n", populacaoA04, populacaoA03) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
         (populacaoA04 > populacaoA01) ? printf("A carta A04 venceu com a População de %d contra %d da carta A01\n", populacaoA04, populacaoA01) 
-                                        : (populacaoA04 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A04\n", populacaoA01, populacaoA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
+            : (populacaoA04 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A04\n", populacaoA01, populacaoA04) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
         (populacaoA04 > populacaoA02) ? printf("A carta A04 venceu com a População de %d contra %d da carta A02\n", populacaoA04, populacaoA02) 
-                                        : (populacaoA04 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A04\n", populacaoA02, populacaoA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
+            : (populacaoA04 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A04\n", populacaoA02, populacaoA04) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
         (populacaoA04 > populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A03\n", populacaoA04, populacaoA03) 
-                                        : (populacaoA04 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A04\n", populacaoA03, populacaoA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
+            : (populacaoA04 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A04\n", populacaoA03, populacaoA04) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
     } 
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
@@ -1631,53 +1613,53 @@ case 1: // População
 
 case 2: // Área
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
-        (areaA01 > areaA02) ? printf("A carta A01 venceu com a Área de %d contra %d da carta A02\n", areaA01, areaA02) 
-                                        : (areaA01 < areaA02) ? printf("A carta A02 venceu com a Área de %d contra %d da carta A01\n", areaA02, areaA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA01);
+        (areaA01 > areaA02) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA01, areaA02) 
+            : (areaA01 < areaA02) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA02, areaA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
-        (areaA01 > areaA03) ? printf("A carta A01 venceu com a Área de %d contra %d da carta A03\n", areaA01, areaA03) 
-                                        : (areaA01 < areaA03) ? printf("A carta A03 venceu com a Área de %d contra %d da carta A01\n", areaA03, areaA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA01);
+        (areaA01 > areaA03) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA01, areaA03) 
+            : (areaA01 < areaA03) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA03, areaA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
-        (areaA01 > areaA04) ? printf("A carta A01 venceu com a Área de %d contra %d da carta A04\n", areaA01, areaA04) 
-                                        : (areaA01 < areaA04) ? printf("A carta A04 venceu com a Área de %d contra %d da carta A01\n", areaA04, areaA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA01);
+        (areaA01 > areaA04) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA01, areaA04) 
+            : (areaA01 < areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA04, areaA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
-        (areaA02 > areaA01) ? printf("A carta A02 venceu com a Área de %d contra %d da carta A01\n", areaA02, areaA01) 
-                                        : (areaA02 < areaA01) ? printf("A carta A01 venceu com a Área de %d contra %d da carta A02\n", areaA01, areaA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA02);
+        (areaA02 > areaA01) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA02, areaA01) 
+            : (areaA02 < areaA01) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA01, areaA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
-        (areaA02 > areaA03) ? printf("A carta A02 venceu com a Área de %d contra %d da carta A03\n", areaA02, areaA03) 
-                                        : (areaA02 < areaA03) ? printf("A carta A03 venceu com a Área de %d contra %d da carta A02\n", areaA03, areaA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA02);
+        (areaA02 > areaA03) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA02, areaA03) 
+            : (areaA02 < areaA03) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA03, areaA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
-        (areaA02 > areaA04) ? printf("A carta A02 venceu com a Área de %d contra %d da carta A04\n", areaA02, areaA04) 
-                                        : (areaA02 < areaA04) ? printf("A carta A04 venceu com a Área de %d contra %d da carta A02\n", areaA04, areaA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA02);
+        (areaA02 > areaA04) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA02, areaA04) 
+            : (areaA02 < areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA04, areaA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
-        (areaA03 > areaA01) ? printf("A carta A03 venceu com a Área de %d contra %d da carta A01\n", areaA03, areaA01) 
-                                        : (areaA03 < areaA01) ? printf("A carta A01 venceu com a Área de %d contra %d da carta A03\n", areaA01, areaA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA03);
+        (areaA03 > areaA01) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA03, areaA01) 
+            : (areaA03 < areaA01) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA01, areaA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
-        (areaA03 > areaA02) ? printf("A carta A03 venceu com a Área de %d contra %d da carta A02\n", areaA03, areaA02) 
-                                        : (areaA03 < areaA02) ? printf("A carta A02 venceu com a Área de %d contra %d da carta A03\n", areaA02, areaA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA03);
+        (areaA03 > areaA02) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA03, areaA02) 
+            : (areaA03 < areaA02) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA02, areaA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
-        (areaA03 > areaA04) ? printf("A carta A03 venceu com a Área de %d contra %d da carta A04\n", areaA03, areaA04) 
-                                        : (areaA03 < areaA04) ? printf("A carta A04 venceu com a Área de %d contra %d da carta A03\n", areaA04, areaA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA03);
+        (areaA03 > areaA04) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA03, areaA04) 
+            : (areaA03 < areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA04, areaA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
-        (areaA04 > areaA01) ? printf("A carta A04 venceu com a Área de %d contra %d da carta A01\n", areaA04, areaA01) 
-                                        : (areaA04 < areaA01) ? printf("A carta A01 venceu com a Área de %d contra %d da carta A04\n", areaA01, areaA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA04);
+        (areaA04 > areaA01) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA04, areaA01) 
+            : (areaA04 < areaA01) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA01, areaA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
-        (areaA04 > areaA02) ? printf("A carta A04 venceu com a Área de %d contra %d da carta A02\n", areaA04, areaA02) 
-                                        : (areaA04 < areaA02) ? printf("A carta A02 venceu com a Área de %d contra %d da carta A04\n", areaA02, areaA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA04);
+        (areaA04 > areaA02) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA04, areaA02) 
+            : (areaA04 < areaA02) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA02, areaA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
-        (areaA04 > areaA04) ? printf("A carta A04 venceu com a Área de %d contra %d da carta A03\n", areaA04, areaA03) 
-                                        : (areaA04 < areaA03) ? printf("A carta A03 venceu com a Área de %d contra %d da carta A04\n", areaA03, areaA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Área de %d\n", areaA04);
+        (areaA04 > areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA04, areaA03) 
+            : (areaA04 < areaA03) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA03, areaA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA04);
     } 
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
@@ -1686,53 +1668,53 @@ case 2: // Área
 
 case 3: // P.I.B.
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
-        (PIBA01 > PIBA02) ? printf("A carta A01 venceu com o P.I.B. de %d contra %d da carta A02\n", PIBA01, PIBA02) 
-                                        : (PIBA01 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %d contra %d da carta A01\n", PIBA02, PIBA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA01);
+        (PIBA01 > PIBA02) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA01, PIBA02) 
+            : (PIBA01 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA02, PIBA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
-        (PIBA01 > PIBA03) ? printf("A carta A01 venceu com o P.I.B. de %d contra %d da carta A03\n", PIBA01, PIBA03) 
-                                        : (PIBA01 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %d contra %d da carta A01\n", PIBA03, PIBA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA01);
+        (PIBA01 > PIBA03) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA01, PIBA03) 
+            : (PIBA01 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA03, PIBA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
-        (PIBA01 > PIBA04) ? printf("A carta A01 venceu com o P.I.B. de %d contra %d da carta A04\n", PIBA01, PIBA04) 
-                                        : (PIBA01 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %d contra %d da carta A01\n", PIBA04, PIBA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA01);
+        (PIBA01 > PIBA04) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA01, PIBA04) 
+            : (PIBA01 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA04, PIBA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
-        (PIBA02 > PIBA01) ? printf("A carta A02 venceu com o P.I.B. de %d contra %d da carta A01\n", PIBA02, PIBA01) 
-                                        : (PIBA02 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %d contra %d da carta A02\n", PIBA01, PIBA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA02);
+        (PIBA02 > PIBA01) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA02, PIBA01) 
+            : (PIBA02 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA01, PIBA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
-        (PIBA02 > PIBA03) ? printf("A carta A02 venceu com o P.I.B. de %d contra %d da carta A03\n", PIBA02, PIBA03) 
-                                        : (PIBA02 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %d contra %d da carta A02\n", PIBA03, PIBA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA02);
+        (PIBA02 > PIBA03) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA02, PIBA03) 
+            : (PIBA02 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA03, PIBA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
-        (PIBA02 > PIBA04) ? printf("A carta A02 venceu com o P.I.B. de %d contra %d da carta A04\n", PIBA02, PIBA04) 
-                                        : (PIBA02 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %d contra %d da carta A02\n", PIBA04, PIBA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA02);
+        (PIBA02 > PIBA04) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA02, PIBA04) 
+            : (PIBA02 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA04, PIBA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
-        (PIBA03 > PIBA01) ? printf("A carta A03 venceu com o P.I.B. de %d contra %d da carta A01\n", PIBA03, PIBA01) 
-                                        : (PIBA03 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %d contra %d da carta A03\n", PIBA01, PIBA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA03);
+        (PIBA03 > PIBA01) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA03, PIBA01) 
+            : (PIBA03 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA01, PIBA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
-        (PIBA03 > PIBA02) ? printf("A carta A03 venceu com o P.I.B. de %d contra %d da carta A02\n", PIBA03, PIBA02) 
-                                        : (PIBA03 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %d contra %d da carta A03\n", PIBA02, PIBA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA03);
+        (PIBA03 > PIBA02) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA03, PIBA02) 
+            : (PIBA03 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA02, PIBA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
-        (PIBA03 > PIBA04) ? printf("A carta A03 venceu com o P.I.B. de %d contra %d da carta A04\n", PIBA03, PIBA04) 
-                                        : (PIBA03 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %d contra %d da carta A03\n", PIBA04, PIBA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA03);
+        (PIBA03 > PIBA04) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA03, PIBA04) 
+            : (PIBA03 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA04, PIBA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
-        (PIBA04 > PIBA01) ? printf("A carta A04 venceu com o P.I.B. de %d contra %d da carta A01\n", PIBA04, PIBA01) 
-                                        : (PIBA04 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %d contra %d da carta A04\n", PIBA01, PIBA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA04);
+        (PIBA04 > PIBA01) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA04, PIBA01) 
+            : (PIBA04 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA01, PIBA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
-        (PIBA04 > PIBA02) ? printf("A carta A04 venceu com o P.I.B. de %d contra %d da carta A02\n", PIBA04, PIBA02) 
-                                        : (PIBA04 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %d contra %d da carta A04\n", PIBA02, PIBA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA04);
+        (PIBA04 > PIBA02) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA04, PIBA02) 
+            : (PIBA04 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA02, PIBA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
-        (PIBA04 > PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %d contra %d da carta A03\n", PIBA04, PIBA03) 
-                                        : (PIBA04 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %d contra %d da carta A04\n", PIBA03, PIBA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %d\n", PIBA04);
+        (PIBA04 > PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA04, PIBA03) 
+            : (PIBA04 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA03, PIBA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA04);
     } 
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
@@ -1742,52 +1724,52 @@ case 3: // P.I.B.
 case 4: // Número de Pontos Turísticos
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
         (N_Pontos_TuristicosA01 > N_Pontos_TuristicosA02) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA02) 
-                                        : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
+            : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
         (N_Pontos_TuristicosA01 > N_Pontos_TuristicosA03) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA03) 
-                                        : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
+            : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
         (N_Pontos_TuristicosA01 > N_Pontos_TuristicosA04) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA04) 
-                                        : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
+            : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
         (N_Pontos_TuristicosA02 > N_Pontos_TuristicosA01) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA01) 
-                                        : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
+            : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
         (N_Pontos_TuristicosA02 > N_Pontos_TuristicosA03) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA03) 
-                                        : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
+            : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
         (N_Pontos_TuristicosA02 > N_Pontos_TuristicosA04) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA04) 
-                                        : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
+            : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
         (N_Pontos_TuristicosA03 > N_Pontos_TuristicosA01) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA01) 
-                                        : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
+            : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
         (N_Pontos_TuristicosA03 > N_Pontos_TuristicosA02) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA02) 
-                                        : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
+            : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
         (N_Pontos_TuristicosA03 > N_Pontos_TuristicosA04) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA04) 
-                                        : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
+            : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
         (N_Pontos_TuristicosA04 > N_Pontos_TuristicosA01) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA01) 
-                                        : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
+            : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
         (N_Pontos_TuristicosA04 > N_Pontos_TuristicosA02) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA02) 
-                                        : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
+            : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
         (N_Pontos_TuristicosA04 > N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA03) 
-                                        : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
+            : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
     } 
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
@@ -1796,53 +1778,53 @@ case 4: // Número de Pontos Turísticos
 
 case 5: // Densidade Populacional
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
-        (densidadepopA01 > densidadepopA02) ? printf("A carta A01 venceu com a Densidade Populacional de %d contra %d da carta A02\n", densidadepopA01, densidadepopA02) 
-                                        : (densidadepopA01 < densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %d contra %d da carta A01\n", densidadepopA02, densidadepopA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA01);
+        (densidadepopA01 < densidadepopA02) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA01, densidadepopA02) 
+            : (densidadepopA01 > densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA02, densidadepopA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
-        (densidadepopA01 > densidadepopA03) ? printf("A carta A01 venceu com a Densidade Populacional de %d contra %d da carta A03\n", densidadepopA01, densidadepopA03) 
-                                        : (densidadepopA01 < densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %d contra %d da carta A01\n", densidadepopA03, densidadepopA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA01);
+        (densidadepopA01 < densidadepopA03) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA01, densidadepopA03) 
+            : (densidadepopA01 > densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA03, densidadepopA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
-        (densidadepopA01 > densidadepopA04) ? printf("A carta A01 venceu com a Densidade Populacional de %d contra %d da carta A04\n", densidadepopA01, densidadepopA04) 
-                                        : (densidadepopA01 < densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %d contra %d da carta A01\n", densidadepopA04, densidadepopA01) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA01);
+        (densidadepopA01 < densidadepopA04) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA01, densidadepopA04) 
+            : (densidadepopA01 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA04, densidadepopA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
-        (densidadepopA02 > densidadepopA01) ? printf("A carta A02 venceu com a Densidade Populacional de %d contra %d da carta A01\n", densidadepopA02, densidadepopA01) 
-                                        : (densidadepopA02 < densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %d contra %d da carta A02\n", densidadepopA01, densidadepopA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA02);
+        (densidadepopA02 < densidadepopA01) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA02, densidadepopA01) 
+            : (densidadepopA02 > densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA01, densidadepopA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
-        (densidadepopA02 > densidadepopA03) ? printf("A carta A02 venceu com a Densidade Populacional de %d contra %d da carta A03\n", densidadepopA02, densidadepopA03) 
-                                        : (densidadepopA02 < densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %d contra %d da carta A02\n", densidadepopA03, densidadepopA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA02);
+        (densidadepopA02 < densidadepopA03) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA02, densidadepopA03) 
+            : (densidadepopA02 > densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA03, densidadepopA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
-        (densidadepopA02 > densidadepopA04) ? printf("A carta A02 venceu com a Densidade Populacional de %d contra %d da carta A04\n", densidadepopA02, densidadepopA04) 
-                                        : (densidadepopA02 < densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %d contra %d da carta A02\n", densidadepopA04, densidadepopA02) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA02);
+        (densidadepopA02 < densidadepopA04) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA02, densidadepopA04) 
+            : (densidadepopA02 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA04, densidadepopA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
-        (densidadepopA03 > densidadepopA01) ? printf("A carta A03 venceu com a Densidade Populacional de %d contra %d da carta A01\n", densidadepopA03, densidadepopA01) 
-                                        : (densidadepopA03 < densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %d contra %d da carta A03\n", densidadepopA01, densidadepopA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA03);
+        (densidadepopA03 < densidadepopA01) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA03, densidadepopA01) 
+            : (densidadepopA03 > densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA01, densidadepopA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
-        (densidadepopA03 > densidadepopA02) ? printf("A carta A03 venceu com a Densidade Populacional de %d contra %d da carta A02\n", densidadepopA03, densidadepopA02) 
-                                        : (densidadepopA03 < densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %d contra %d da carta A03\n", densidadepopA02, densidadepopA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA03);
+        (densidadepopA03 < densidadepopA02) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA03, densidadepopA02) 
+            : (densidadepopA03 > densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA02, densidadepopA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
-        (densidadepopA03 > densidadepopA04) ? printf("A carta A03 venceu com a Densidade Populacional de %d contra %d da carta A04\n", densidadepopA03, densidadepopA04) 
-                                        : (densidadepopA03 < densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %d contra %d da carta A03\n", densidadepopA04, densidadepopA03) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA03);
+        (densidadepopA03 < densidadepopA04) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA03, densidadepopA04) 
+            : (densidadepopA03 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA04, densidadepopA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
-        (densidadepopA04 > densidadepopA01) ? printf("A carta A04 venceu com a Densidade Populacional de %d contra %d da carta A01\n", densidadepopA04, densidadepopA01) 
-                                        : (densidadepopA04 < densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %d contra %d da carta A04\n", densidadepopA01, densidadepopA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA04);
+        (densidadepopA04 < densidadepopA01) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA04, densidadepopA01) 
+            : (densidadepopA04 > densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA01, densidadepopA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
-        (densidadepopA04 > densidadepopA02) ? printf("A carta A04 venceu com a Densidade Populacional de %d contra %d da carta A02\n", densidadepopA04, densidadepopA02) 
-                                        : (densidadepopA04 < densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %d contra %d da carta A04\n", densidadepopA02, densidadepopA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA04);
+        (densidadepopA04 < densidadepopA02) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA04, densidadepopA02) 
+            : (densidadepopA04 > densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA02, densidadepopA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
-        (densidadepopA04 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %d contra %d da carta A03\n", densidadepopA04, densidadepopA03) 
-                                        : (densidadepopA04 < densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %d contra %d da carta A04\n", densidadepopA03, densidadepopA04) 
-                                        : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %d\n", densidadepopA04);
+        (densidadepopA04 < densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA04, densidadepopA03) 
+            : (densidadepopA04 > densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA03, densidadepopA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA04);
     } 
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
@@ -1851,53 +1833,53 @@ case 5: // Densidade Populacional
 
 case 6: // PIB Per Capita
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
-        (PIBpercapitaA01 > PIBpercapitaA02) ? printf("A carta A01 venceu com o PIB Per Capita de %d contra %d da carta A02\n", PIBpercapitaA01, PIBpercapitaA02) 
-                                        : (PIBpercapitaA01 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %d contra %d da carta A01\n", PIBpercapitaA02, PIBpercapitaA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA01);
+        (PIBpercapitaA01 > PIBpercapitaA02) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA01, PIBpercapitaA02) 
+            : (PIBpercapitaA01 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA02, PIBpercapitaA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
-        (PIBpercapitaA01 > PIBpercapitaA03) ? printf("A carta A01 venceu com o PIB Per Capita de %d contra %d da carta A03\n", PIBpercapitaA01, PIBpercapitaA03) 
-                                        : (PIBpercapitaA01 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %d contra %d da carta A01\n", PIBpercapitaA03, PIBpercapitaA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA01);
+        (PIBpercapitaA01 > PIBpercapitaA03) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA01, PIBpercapitaA03) 
+            : (PIBpercapitaA01 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA03, PIBpercapitaA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
-        (PIBpercapitaA01 > PIBpercapitaA04) ? printf("A carta A01 venceu com o PIB Per Capita de %d contra %d da carta A04\n", PIBpercapitaA01, PIBpercapitaA04) 
-                                        : (PIBpercapitaA01 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %d contra %d da carta A01\n", PIBpercapitaA04, PIBpercapitaA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA01);
+        (PIBpercapitaA01 > PIBpercapitaA04) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA01, PIBpercapitaA04) 
+            : (PIBpercapitaA01 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA04, PIBpercapitaA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
-        (PIBpercapitaA02 > PIBpercapitaA01) ? printf("A carta A02 venceu com o PIB Per Capita de %d contra %d da carta A01\n", PIBpercapitaA02, PIBpercapitaA01) 
-                                        : (PIBpercapitaA02 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %d contra %d da carta A02\n", PIBpercapitaA01, PIBpercapitaA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA02);
+        (PIBpercapitaA02 > PIBpercapitaA01) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA02, PIBpercapitaA01) 
+            : (PIBpercapitaA02 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA01, PIBpercapitaA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
-        (PIBpercapitaA02 > PIBpercapitaA03) ? printf("A carta A02 venceu com o PIB Per Capita de %d contra %d da carta A03\n", PIBpercapitaA02, PIBpercapitaA03) 
-                                        : (PIBpercapitaA02 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %d contra %d da carta A02\n", PIBpercapitaA03, PIBpercapitaA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA02);
+        (PIBpercapitaA02 > PIBpercapitaA03) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA02, PIBpercapitaA03) 
+            : (PIBpercapitaA02 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA03, PIBpercapitaA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
-        (PIBpercapitaA02 > PIBpercapitaA04) ? printf("A carta A02 venceu com o PIB Per Capita de %d contra %d da carta A04\n", PIBpercapitaA02, PIBpercapitaA04) 
-                                        : (PIBpercapitaA02 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %d contra %d da carta A02\n", PIBpercapitaA04, PIBpercapitaA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA02);
+        (PIBpercapitaA02 > PIBpercapitaA04) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA02, PIBpercapitaA04) 
+            : (PIBpercapitaA02 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA04, PIBpercapitaA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
-        (PIBpercapitaA03 > PIBpercapitaA01) ? printf("A carta A03 venceu com o PIB Per Capita de %d contra %d da carta A01\n", PIBpercapitaA03, PIBpercapitaA01) 
-                                        : (PIBpercapitaA03 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %d contra %d da carta A03\n", PIBpercapitaA01, PIBpercapitaA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA03);
+        (PIBpercapitaA03 > PIBpercapitaA01) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA03, PIBpercapitaA01) 
+            : (PIBpercapitaA03 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA01, PIBpercapitaA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
-        (PIBpercapitaA03 > PIBpercapitaA02) ? printf("A carta A03 venceu com o PIB Per Capita de %d contra %d da carta A02\n", PIBpercapitaA03, PIBpercapitaA02) 
-                                        : (PIBpercapitaA03 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %d contra %d da carta A03\n", PIBpercapitaA02, PIBpercapitaA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA03);
+        (PIBpercapitaA03 > PIBpercapitaA02) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA03, PIBpercapitaA02) 
+            : (PIBpercapitaA03 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA02, PIBpercapitaA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
-        (PIBpercapitaA03 > PIBpercapitaA04) ? printf("A carta A03 venceu com o PIB Per Capita de %d contra %d da carta A04\n", PIBpercapitaA03, PIBpercapitaA04) 
-                                        : (PIBpercapitaA03 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %d contra %d da carta A03\n", PIBpercapitaA04, PIBpercapitaA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA03);
+        (PIBpercapitaA03 > PIBpercapitaA04) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA03, PIBpercapitaA04) 
+            : (PIBpercapitaA03 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA04, PIBpercapitaA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
-        (PIBpercapitaA04 > PIBpercapitaA01) ? printf("A carta A04 venceu com o PIB Per Capita de %d contra %d da carta A01\n", PIBpercapitaA04, PIBpercapitaA01) 
-                                        : (PIBpercapitaA04 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %d contra %d da carta A04\n", PIBpercapitaA01, PIBpercapitaA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA04);
+        (PIBpercapitaA04 > PIBpercapitaA01) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA04, PIBpercapitaA01) 
+            : (PIBpercapitaA04 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA01, PIBpercapitaA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
-        (PIBpercapitaA04 > PIBpercapitaA02) ? printf("A carta A04 venceu com o PIB Per Capita de %d contra %d da carta A02\n", PIBpercapitaA04, PIBpercapitaA02) 
-                                        : (PIBpercapitaA04 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %d contra %d da carta A04\n", PIBpercapitaA02, PIBpercapitaA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA04);
+        (PIBpercapitaA04 > PIBpercapitaA02) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA04, PIBpercapitaA02) 
+            : (PIBpercapitaA04 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA02, PIBpercapitaA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
-        (PIBpercapitaA04 > PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %d contra %d da carta A03\n", PIBpercapitaA04, PIBpercapitaA03) 
-                                        : (PIBpercapitaA04 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %d contra %d da carta A04\n", PIBpercapitaA03, PIBpercapitaA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %d\n", PIBpercapitaA04);
+        (PIBpercapitaA04 > PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA04, PIBpercapitaA03) 
+            : (PIBpercapitaA04 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA03, PIBpercapitaA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA04);
     } 
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
@@ -1906,53 +1888,446 @@ case 6: // PIB Per Capita
 
 case 7: // Super Poder
     if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
-        (SuperPoderA01 > SuperPoderA02) ? printf("A carta A01 venceu com o Super Poder de %d contra %d da carta A02\n", SuperPoderA01, SuperPoderA02) 
-                                        : (SuperPoderA01 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %d contra %d da carta A01\n", SuperPoderA02, SuperPoderA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA01);
+        (SuperPoderA01 > SuperPoderA02) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA01, SuperPoderA02) 
+            : (SuperPoderA01 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA02, SuperPoderA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
-        (SuperPoderA01 > SuperPoderA03) ? printf("A carta A01 venceu com o Super Poder de %d contra %d da carta A03\n", SuperPoderA01, SuperPoderA03) 
-                                        : (SuperPoderA01 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %d contra %d da carta A01\n", SuperPoderA03, SuperPoderA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA01);
+        (SuperPoderA01 > SuperPoderA03) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA01, SuperPoderA03) 
+            : (SuperPoderA01 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA03, SuperPoderA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA01);
     } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
-        (SuperPoderA01 > SuperPoderA04) ? printf("A carta A01 venceu com o Super Poder de %d contra %d da carta A04\n", SuperPoderA01, SuperPoderA04) 
-                                        : (SuperPoderA01 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %d contra %d da carta A01\n", SuperPoderA04, SuperPoderA01) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA01);
+        (SuperPoderA01 > SuperPoderA04) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA01, SuperPoderA04) 
+            : (SuperPoderA01 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA04, SuperPoderA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA01);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
-        (SuperPoderA02 > SuperPoderA01) ? printf("A carta A02 venceu com o Super Poder de %d contra %d da carta A01\n", SuperPoderA02, SuperPoderA01) 
-                                        : (SuperPoderA02 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %d contra %d da carta A02\n", SuperPoderA01, SuperPoderA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA02);
+        (SuperPoderA02 > SuperPoderA01) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA02, SuperPoderA01) 
+            : (SuperPoderA02 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA01, SuperPoderA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
-        (SuperPoderA02 > SuperPoderA03) ? printf("A carta A02 venceu com o Super Poder de %d contra %d da carta A03\n", SuperPoderA02, SuperPoderA03) 
-                                        : (SuperPoderA02 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %d contra %d da carta A02\n", SuperPoderA03, SuperPoderA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA02);
+        (SuperPoderA02 > SuperPoderA03) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA02, SuperPoderA03) 
+            : (SuperPoderA02 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA03, SuperPoderA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA02);
     } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
-        (SuperPoderA02 > SuperPoderA04) ? printf("A carta A02 venceu com o Super Poder de %d contra %d da carta A04\n", SuperPoderA02, SuperPoderA04) 
-                                        : (SuperPoderA02 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %d contra %d da carta A02\n", SuperPoderA04, SuperPoderA02) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA02);
+        (SuperPoderA02 > SuperPoderA04) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA02, SuperPoderA04) 
+            : (SuperPoderA02 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA04, SuperPoderA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA02);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
-        (SuperPoderA03 > SuperPoderA01) ? printf("A carta A03 venceu com o Super Poder de %d contra %d da carta A01\n", SuperPoderA03, SuperPoderA01) 
-                                        : (SuperPoderA03 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %d contra %d da carta A03\n", SuperPoderA01, SuperPoderA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA03);
+        (SuperPoderA03 > SuperPoderA01) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA03, SuperPoderA01) 
+            : (SuperPoderA03 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA01, SuperPoderA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
-        (SuperPoderA03 > SuperPoderA02) ? printf("A carta A03 venceu com o Super Poder de %d contra %d da carta A02\n", SuperPoderA03, SuperPoderA02) 
-                                        : (SuperPoderA03 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %d contra %d da carta A03\n", SuperPoderA02, SuperPoderA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA03);
+        (SuperPoderA03 > SuperPoderA02) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA03, SuperPoderA02) 
+            : (SuperPoderA03 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA02, SuperPoderA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA03);
     } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
-        (SuperPoderA03 > SuperPoderA04) ? printf("A carta A03 venceu com o Super Poder de %d contra %d da carta A04\n", SuperPoderA03, SuperPoderA04) 
-                                        : (SuperPoderA03 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %d contra %d da carta A03\n", SuperPoderA04, SuperPoderA03) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA03);
+        (SuperPoderA03 > SuperPoderA04) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA03, SuperPoderA04) 
+            : (SuperPoderA03 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA04, SuperPoderA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA03);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
-        (SuperPoderA04 > SuperPoderA01) ? printf("A carta A04 venceu com o Super Poder de %d contra %d da carta A01\n", SuperPoderA04, SuperPoderA01) 
-                                        : (SuperPoderA04 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %d contra %d da carta A04\n", SuperPoderA01, SuperPoderA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA04);
+        (SuperPoderA04 > SuperPoderA01) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA04, SuperPoderA01) 
+            : (SuperPoderA04 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA01, SuperPoderA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
-        (SuperPoderA04 > SuperPoderA02) ? printf("A carta A04 venceu com o Super Poder de %d contra %d da carta A02\n", SuperPoderA04, SuperPoderA02) 
-                                        : (SuperPoderA04 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %d contra %d da carta A04\n", SuperPoderA02, SuperPoderA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA04);
+        (SuperPoderA04 > SuperPoderA02) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA04, SuperPoderA02) 
+            : (SuperPoderA04 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA02, SuperPoderA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA04);
     } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
-        (SuperPoderA04 > SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %d contra %d da carta A03\n", SuperPoderA04, SuperPoderA03) 
-                                        : (SuperPoderA04 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %d contra %d da carta A04\n", SuperPoderA03, SuperPoderA04) 
-                                        : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %d\n", SuperPoderA04);
+        (SuperPoderA04 > SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA04, SuperPoderA03) 
+            : (SuperPoderA04 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA03, SuperPoderA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA04);
+	}
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+    default:
+        printf("Atributo inválido\n");
+        break;  
+    }
+
+// Comparação das cartas com base no atributo 02 escolhido
+
+switch (atributoescolhido2) {
+case 1: // População
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (populacaoA01 > populacaoA02) ? printf("A carta A01 venceu com a População de %d contra %d da carta A02\n", populacaoA01, populacaoA02) 
+            : (populacaoA01 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A01\n", populacaoA02, populacaoA01) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (populacaoA01 > populacaoA03) ? printf("A carta A01 venceu com a População de %d contra %d da carta A03\n", populacaoA01, populacaoA03) 
+            : (populacaoA01 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A01\n", populacaoA03, populacaoA01) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (populacaoA01 > populacaoA04) ? printf("A carta A01 venceu com a População de %d contra %d da carta A04\n", populacaoA01, populacaoA04) 
+            : (populacaoA01 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A01\n", populacaoA04, populacaoA01) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (populacaoA02 > populacaoA01) ? printf("A carta A02 venceu com a População de %d contra %d da carta A01\n", populacaoA02, populacaoA01) 
+            : (populacaoA02 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A02\n", populacaoA01, populacaoA02) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (populacaoA02 > populacaoA03) ? printf("A carta A02 venceu com a População de %d contra %d da carta A03\n", populacaoA02, populacaoA03) 
+            : (populacaoA02 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A02\n", populacaoA03, populacaoA02) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (populacaoA02 > populacaoA04) ? printf("A carta A02 venceu com a População de %d contra %d da carta A04\n", populacaoA02, populacaoA04) 
+            : (populacaoA02 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A02\n", populacaoA04, populacaoA02) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (populacaoA03 > populacaoA01) ? printf("A carta A03 venceu com a População de %d contra %d da carta A01\n", populacaoA03, populacaoA01) 
+            : (populacaoA03 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A03\n", populacaoA01, populacaoA03) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (populacaoA03 > populacaoA02) ? printf("A carta A03 venceu com a População de %d contra %d da carta A02\n", populacaoA03, populacaoA02) 
+            : (populacaoA03 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A03\n", populacaoA02, populacaoA03) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (populacaoA03 > populacaoA04) ? printf("A carta A03 venceu com a População de %d contra %d da carta A04\n", populacaoA03, populacaoA04) 
+            : (populacaoA03 < populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A03\n", populacaoA04, populacaoA03) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (populacaoA04 > populacaoA01) ? printf("A carta A04 venceu com a População de %d contra %d da carta A01\n", populacaoA04, populacaoA01) 
+            : (populacaoA04 < populacaoA01) ? printf("A carta A01 venceu com a População de %d contra %d da carta A04\n", populacaoA01, populacaoA04) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (populacaoA04 > populacaoA02) ? printf("A carta A04 venceu com a População de %d contra %d da carta A02\n", populacaoA04, populacaoA02) 
+            : (populacaoA04 < populacaoA02) ? printf("A carta A02 venceu com a População de %d contra %d da carta A04\n", populacaoA02, populacaoA04) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (populacaoA04 > populacaoA04) ? printf("A carta A04 venceu com a População de %d contra %d da carta A03\n", populacaoA04, populacaoA03) 
+            : (populacaoA04 < populacaoA03) ? printf("A carta A03 venceu com a População de %d contra %d da carta A04\n", populacaoA03, populacaoA04) 
+            : printf("Empate! Ambas as cartas têm a mesma População de %d\n", populacaoA04);
+    } 
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+case 2: // Área
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (areaA01 > areaA02) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA01, areaA02) 
+            : (areaA01 < areaA02) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA02, areaA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (areaA01 > areaA03) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA01, areaA03) 
+            : (areaA01 < areaA03) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA03, areaA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (areaA01 > areaA04) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA01, areaA04) 
+            : (areaA01 < areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA04, areaA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (areaA02 > areaA01) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA02, areaA01) 
+            : (areaA02 < areaA01) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA01, areaA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (areaA02 > areaA03) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA02, areaA03) 
+            : (areaA02 < areaA03) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA03, areaA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (areaA02 > areaA04) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA02, areaA04) 
+            : (areaA02 < areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA04, areaA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (areaA03 > areaA01) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA03, areaA01) 
+            : (areaA03 < areaA01) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA01, areaA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (areaA03 > areaA02) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA03, areaA02) 
+            : (areaA03 < areaA02) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA02, areaA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (areaA03 > areaA04) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA03, areaA04) 
+            : (areaA03 < areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA04, areaA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (areaA04 > areaA01) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A01\n", areaA04, areaA01) 
+            : (areaA04 < areaA01) ? printf("A carta A01 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA01, areaA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (areaA04 > areaA02) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A02\n", areaA04, areaA02) 
+            : (areaA04 < areaA02) ? printf("A carta A02 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA02, areaA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (areaA04 > areaA04) ? printf("A carta A04 venceu com a Área de %.2f contra %.2f da carta A03\n", areaA04, areaA03) 
+            : (areaA04 < areaA03) ? printf("A carta A03 venceu com a Área de %.2f contra %.2f da carta A04\n", areaA03, areaA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Área de %.2f\n", areaA04);
+    } 
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+case 3: // P.I.B.
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (PIBA01 > PIBA02) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA01, PIBA02) 
+            : (PIBA01 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA02, PIBA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (PIBA01 > PIBA03) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA01, PIBA03) 
+            : (PIBA01 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA03, PIBA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (PIBA01 > PIBA04) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA01, PIBA04) 
+            : (PIBA01 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA04, PIBA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (PIBA02 > PIBA01) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA02, PIBA01) 
+            : (PIBA02 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA01, PIBA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (PIBA02 > PIBA03) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA02, PIBA03) 
+            : (PIBA02 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA03, PIBA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (PIBA02 > PIBA04) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA02, PIBA04) 
+            : (PIBA02 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA04, PIBA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (PIBA03 > PIBA01) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA03, PIBA01) 
+            : (PIBA03 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA01, PIBA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (PIBA03 > PIBA02) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA03, PIBA02) 
+            : (PIBA03 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA02, PIBA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (PIBA03 > PIBA04) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA03, PIBA04) 
+            : (PIBA03 < PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA04, PIBA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (PIBA04 > PIBA01) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A01\n", PIBA04, PIBA01) 
+            : (PIBA04 < PIBA01) ? printf("A carta A01 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA01, PIBA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (PIBA04 > PIBA02) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A02\n", PIBA04, PIBA02) 
+            : (PIBA04 < PIBA02) ? printf("A carta A02 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA02, PIBA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (PIBA04 > PIBA04) ? printf("A carta A04 venceu com o P.I.B. de %.2f contra %.2f da carta A03\n", PIBA04, PIBA03) 
+            : (PIBA04 < PIBA03) ? printf("A carta A03 venceu com o P.I.B. de %.2f contra %.2f da carta A04\n", PIBA03, PIBA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo P.I.B. de %.2f\n", PIBA04);
+    } 
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+case 4: // Número de Pontos Turísticos
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (N_Pontos_TuristicosA01 > N_Pontos_TuristicosA02) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA02) 
+            : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (N_Pontos_TuristicosA01 > N_Pontos_TuristicosA03) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA03) 
+            : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (N_Pontos_TuristicosA01 > N_Pontos_TuristicosA04) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA04) 
+            : (N_Pontos_TuristicosA01 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (N_Pontos_TuristicosA02 > N_Pontos_TuristicosA01) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA01) 
+            : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (N_Pontos_TuristicosA02 > N_Pontos_TuristicosA03) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA03) 
+            : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (N_Pontos_TuristicosA02 > N_Pontos_TuristicosA04) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA04) 
+            : (N_Pontos_TuristicosA02 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (N_Pontos_TuristicosA03 > N_Pontos_TuristicosA01) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA01) 
+            : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (N_Pontos_TuristicosA03 > N_Pontos_TuristicosA02) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA02) 
+            : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (N_Pontos_TuristicosA03 > N_Pontos_TuristicosA04) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA04) 
+            : (N_Pontos_TuristicosA03 < N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (N_Pontos_TuristicosA04 > N_Pontos_TuristicosA01) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A01\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA01) 
+            : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA01) ? printf("A carta A01 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA01, N_Pontos_TuristicosA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (N_Pontos_TuristicosA04 > N_Pontos_TuristicosA02) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A02\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA02) 
+            : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA02) ? printf("A carta A02 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA02, N_Pontos_TuristicosA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (N_Pontos_TuristicosA04 > N_Pontos_TuristicosA04) ? printf("A carta A04 venceu com o Número de Pontos Turísticos de %d contra %d da carta A03\n", N_Pontos_TuristicosA04, N_Pontos_TuristicosA03) 
+            : (N_Pontos_TuristicosA04 < N_Pontos_TuristicosA03) ? printf("A carta A03 venceu com o Número de Pontos Turísticos de %d contra %d da carta A04\n", N_Pontos_TuristicosA03, N_Pontos_TuristicosA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Número de Pontos Turísticos de %d\n", N_Pontos_TuristicosA04);
+    } 
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+case 5: // Densidade Populacional
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (densidadepopA01 < densidadepopA02) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA01, densidadepopA02) 
+            : (densidadepopA01 > densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA02, densidadepopA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (densidadepopA01 < densidadepopA03) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA01, densidadepopA03) 
+            : (densidadepopA01 > densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA03, densidadepopA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (densidadepopA01 < densidadepopA04) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA01, densidadepopA04) 
+            : (densidadepopA01 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA04, densidadepopA01) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (densidadepopA02 < densidadepopA01) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA02, densidadepopA01) 
+            : (densidadepopA02 > densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA01, densidadepopA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (densidadepopA02 < densidadepopA03) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA02, densidadepopA03) 
+            : (densidadepopA02 > densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA03, densidadepopA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (densidadepopA02 < densidadepopA04) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA02, densidadepopA04) 
+            : (densidadepopA02 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA04, densidadepopA02) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (densidadepopA03 < densidadepopA01) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA03, densidadepopA01) 
+            : (densidadepopA03 > densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA01, densidadepopA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (densidadepopA03 < densidadepopA02) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA03, densidadepopA02) 
+            : (densidadepopA03 > densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA02, densidadepopA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (densidadepopA03 < densidadepopA04) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA03, densidadepopA04) 
+            : (densidadepopA03 > densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA04, densidadepopA03) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (densidadepopA04 < densidadepopA01) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A01\n", densidadepopA04, densidadepopA01) 
+            : (densidadepopA04 > densidadepopA01) ? printf("A carta A01 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA01, densidadepopA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (densidadepopA04 < densidadepopA02) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A02\n", densidadepopA04, densidadepopA02) 
+            : (densidadepopA04 > densidadepopA02) ? printf("A carta A02 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA02, densidadepopA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (densidadepopA04 < densidadepopA04) ? printf("A carta A04 venceu com a Densidade Populacional de %.2f contra %.2f da carta A03\n", densidadepopA04, densidadepopA03) 
+            : (densidadepopA04 > densidadepopA03) ? printf("A carta A03 venceu com a Densidade Populacional de %.2f contra %.2f da carta A04\n", densidadepopA03, densidadepopA04) 
+            : printf("Empate! Ambas as cartas têm a mesma Densidade Populacional de %.2f\n", densidadepopA04);
+    } 
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+case 6: // PIB Per Capita
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (PIBpercapitaA01 > PIBpercapitaA02) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA01, PIBpercapitaA02) 
+            : (PIBpercapitaA01 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA02, PIBpercapitaA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (PIBpercapitaA01 > PIBpercapitaA03) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA01, PIBpercapitaA03) 
+            : (PIBpercapitaA01 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA03, PIBpercapitaA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (PIBpercapitaA01 > PIBpercapitaA04) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA01, PIBpercapitaA04) 
+            : (PIBpercapitaA01 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA04, PIBpercapitaA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (PIBpercapitaA02 > PIBpercapitaA01) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA02, PIBpercapitaA01) 
+            : (PIBpercapitaA02 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA01, PIBpercapitaA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (PIBpercapitaA02 > PIBpercapitaA03) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA02, PIBpercapitaA03) 
+            : (PIBpercapitaA02 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA03, PIBpercapitaA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (PIBpercapitaA02 > PIBpercapitaA04) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA02, PIBpercapitaA04) 
+            : (PIBpercapitaA02 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA04, PIBpercapitaA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (PIBpercapitaA03 > PIBpercapitaA01) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA03, PIBpercapitaA01) 
+            : (PIBpercapitaA03 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA01, PIBpercapitaA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (PIBpercapitaA03 > PIBpercapitaA02) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA03, PIBpercapitaA02) 
+            : (PIBpercapitaA03 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA02, PIBpercapitaA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (PIBpercapitaA03 > PIBpercapitaA04) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA03, PIBpercapitaA04) 
+            : (PIBpercapitaA03 < PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA04, PIBpercapitaA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (PIBpercapitaA04 > PIBpercapitaA01) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A01\n", PIBpercapitaA04, PIBpercapitaA01) 
+            : (PIBpercapitaA04 < PIBpercapitaA01) ? printf("A carta A01 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA01, PIBpercapitaA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (PIBpercapitaA04 > PIBpercapitaA02) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A02\n", PIBpercapitaA04, PIBpercapitaA02) 
+            : (PIBpercapitaA04 < PIBpercapitaA02) ? printf("A carta A02 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA02, PIBpercapitaA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (PIBpercapitaA04 > PIBpercapitaA04) ? printf("A carta A04 venceu com o PIB Per Capita de %.2f contra %.2f da carta A03\n", PIBpercapitaA04, PIBpercapitaA03) 
+            : (PIBpercapitaA04 < PIBpercapitaA03) ? printf("A carta A03 venceu com o PIB Per Capita de %.2f contra %.2f da carta A04\n", PIBpercapitaA03, PIBpercapitaA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo PIB Per Capita de %.2f\n", PIBpercapitaA04);
+    } 
+    if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
+        else {
+        printf("Opção inválida\n");}
+        break;
+
+case 7: // Super Poder
+    if (cartaescolhida1 == 1 && cartaescolhida2 == 2) {
+        (SuperPoderA01 > SuperPoderA02) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA01, SuperPoderA02) 
+            : (SuperPoderA01 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA02, SuperPoderA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 3) {
+        (SuperPoderA01 > SuperPoderA03) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA01, SuperPoderA03) 
+            : (SuperPoderA01 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA03, SuperPoderA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA01);
+    } else if (cartaescolhida1 == 1 && cartaescolhida2 == 4) {
+        (SuperPoderA01 > SuperPoderA04) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA01, SuperPoderA04) 
+            : (SuperPoderA01 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA04, SuperPoderA01) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA01);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 1) {
+        (SuperPoderA02 > SuperPoderA01) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA02, SuperPoderA01) 
+            : (SuperPoderA02 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA01, SuperPoderA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 3) {
+        (SuperPoderA02 > SuperPoderA03) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA02, SuperPoderA03) 
+            : (SuperPoderA02 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA03, SuperPoderA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA02);
+    } else if (cartaescolhida1 == 2 && cartaescolhida2 == 4) {
+        (SuperPoderA02 > SuperPoderA04) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA02, SuperPoderA04) 
+            : (SuperPoderA02 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA04, SuperPoderA02) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA02);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 1) {
+        (SuperPoderA03 > SuperPoderA01) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA03, SuperPoderA01) 
+            : (SuperPoderA03 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA01, SuperPoderA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 2) {
+        (SuperPoderA03 > SuperPoderA02) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA03, SuperPoderA02) 
+            : (SuperPoderA03 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA02, SuperPoderA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA03);
+    } else if (cartaescolhida1 == 3 && cartaescolhida2 == 4) {
+        (SuperPoderA03 > SuperPoderA04) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA03, SuperPoderA04) 
+            : (SuperPoderA03 < SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA04, SuperPoderA03) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA03);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 1) {
+        (SuperPoderA04 > SuperPoderA01) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A01\n", SuperPoderA04, SuperPoderA01) 
+            : (SuperPoderA04 < SuperPoderA01) ? printf("A carta A01 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA01, SuperPoderA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 2) {
+        (SuperPoderA04 > SuperPoderA02) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A02\n", SuperPoderA04, SuperPoderA02) 
+            : (SuperPoderA04 < SuperPoderA02) ? printf("A carta A02 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA02, SuperPoderA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA04);
+    } else if (cartaescolhida1 == 4 && cartaescolhida2 == 3) {
+        (SuperPoderA04 > SuperPoderA04) ? printf("A carta A04 venceu com o Super Poder de %.2f contra %.2f da carta A03\n", SuperPoderA04, SuperPoderA03) 
+            : (SuperPoderA04 < SuperPoderA03) ? printf("A carta A03 venceu com o Super Poder de %.2f contra %.2f da carta A04\n", SuperPoderA03, SuperPoderA04) 
+            : printf("Empate! Ambas as cartas têm o mesmo Super Poder de %.2f\n", SuperPoderA04);
 	}
     if (cartaescolhida1 == 1 || cartaescolhida1 == 2 ||cartaescolhida1 == 3 ||cartaescolhida1 == 4 && cartaescolhida2 == 1 || cartaescolhida2 == 2 ||cartaescolhida2 == 3 ||cartaescolhida2 == 4) {printf("\n");}
         else {
